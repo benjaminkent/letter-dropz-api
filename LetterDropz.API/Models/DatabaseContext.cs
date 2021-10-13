@@ -1,4 +1,5 @@
 ﻿using System;
+using LetterDropz.API.Models.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace LetterDropz.API.Models

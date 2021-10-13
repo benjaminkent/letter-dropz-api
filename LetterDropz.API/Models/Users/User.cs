@@ -1,5 +1,5 @@
 ﻿using System;
-namespace LetterDropz.API.Models
+namespace LetterDropz.API.Models.Users
 {
     public class User
     {
@@ -7,8 +7,8 @@ namespace LetterDropz.API.Models
         public string UserName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public bool IsAdmin { get; set; } = false;
+        public bool IsAdmin { get; set; }
     }
 }
