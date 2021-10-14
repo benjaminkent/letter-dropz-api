@@ -17,7 +17,19 @@ namespace LetterDropz.API.Services
 
         public async Task<User> CreateUser(UserDto userDto)
         {
-            var user = userDto.ToUser();
+            var user = userDto.Create();
+
+            try
+            {
+                await _dbContext.Users.AddAsync(user);
+                await _dbContext.SaveChangesAsync();
+
+                return user;
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }

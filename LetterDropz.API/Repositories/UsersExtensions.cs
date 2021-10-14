@@ -5,11 +5,11 @@ namespace LetterDropz.API.Repositories
 {
     public static class UsersExtensions
     {
-        public static User ToUser(this UserDto userDto)
+        public static User Create(this UserDto userDto)
         {
             return new User()
             {
-                UserName = userDto.UserName,
+                Username = userDto.Username,
                 Email = userDto.Email,
                 Password = userDto.Password,
                 CreatedAt = DateTime.Now,
